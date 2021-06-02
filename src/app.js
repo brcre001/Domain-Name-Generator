@@ -28,6 +28,8 @@ window.onload = function() {
       ending[indexEnding];
 
     // Call string by ID and change ID for every cycle of loop
-    document.getElementById("generator" + i).innerHTML = sentence;
+    //document.getElementById("generator" + i).innerHTML = sentence;
+
+    document.getElementById("myDomainName").innerHTML = `<li>${sentence}</li>`;
   }
 };
