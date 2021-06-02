@@ -13,9 +13,6 @@ window.onload = function() {
   const noun = ["elon", "gates", "jobbs", "bezos", "mogul"];
   const ending = [".com", ".net", ".us", ".io", ".biz"];
 
-  // Array that will contain list of generated domain names
-  let finalOutput = [];
-
   // Loop to print 10 different combinations
   for (let i = 0; i < 10; i++) {
     let indexPronoun = Math.floor(Math.random() * pronoun.length);
@@ -30,8 +27,7 @@ window.onload = function() {
       noun[indexNoun] +
       ending[indexEnding];
 
-    // Pushing generated string to the finalOutput array
-    finalOutput.push(sentence);
+    // Call string by ID and change ID for every cycle of loop
+    document.getElementById("generator" + i).innerHTML = sentence;
   }
-  document.getElementById("generator").innerHTML = finalOutput;
 };
