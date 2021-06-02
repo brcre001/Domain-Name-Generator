@@ -23,19 +23,15 @@ window.onload = function() {
     let indexNoun = Math.floor(Math.random() * noun.length);
     let indexEnding = Math.floor(Math.random() * ending.length);
 
-    // Get string for domain name
+    // Create string for domain name
     let sentence =
       pronoun[indexPronoun] +
       adj[indexAdj] +
       noun[indexNoun] +
       ending[indexEnding];
 
-    // Pushing generated string to an separate array
+    // Pushing generated string to the finalOutput array
     finalOutput.push(sentence);
-  }
-
-  for (let j = 0; j < 10; j++) {
-    console.log(finalOutput[j]);
   }
   document.getElementById("generator").innerHTML = finalOutput;
 };
